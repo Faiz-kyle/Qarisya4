@@ -449,24 +449,16 @@ body {
   to { opacity: 0; transform: scale(2) translateY(-60px); }
 }
 
-/* Semua card bisa scroll jika isinya kepanjangan */
-.card,
-.photo-slide-card,
-.pixel-window {
-  max-height: 90vh;
+/* Secret Recipe Letter */
+#slide-letter .card {
+  max-height: 85vh;
   overflow-y: auto;
 
-  /* Firefox */
   scrollbar-width: none;
-
-  /* Edge/IE lama */
   -ms-overflow-style: none;
 }
 
-/* Chrome, Edge, Safari */
-.card::-webkit-scrollbar,
-.photo-slide-card::-webkit-scrollbar,
-.pixel-window::-webkit-scrollbar {
+#slide-letter .card::-webkit-scrollbar {
   display: none;
 }
 
