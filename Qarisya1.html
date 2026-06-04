@@ -449,16 +449,25 @@ body {
   to { opacity: 0; transform: scale(2) translateY(-60px); }
 }
 
-#slide-letter {
+/* Semua card bisa scroll jika isinya kepanjangan */
+.card,
+.photo-slide-card,
+.pixel-window {
+  max-height: 90vh;
   overflow-y: auto;
-  align-items: flex-start;
-  padding: 30px 20px;
+
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* Edge/IE lama */
+  -ms-overflow-style: none;
 }
 
-/* Card agar tidak mepet atas */
-#slide-letter .card {
-  margin: 20px auto;
-  max-height: none;
+/* Chrome, Edge, Safari */
+.card::-webkit-scrollbar,
+.photo-slide-card::-webkit-scrollbar,
+.pixel-window::-webkit-scrollbar {
+  display: none;
 }
 
 </style>
